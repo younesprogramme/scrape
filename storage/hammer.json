@@ -1,0 +1,201 @@
+{
+    "_id": "hammer",
+    "startUrl": ["http://www.autoupgradellc.com/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": false,
+        "parentSelectors": ["wrapper"],
+        "selector": "_parent_",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "Stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='Stock Number']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[itemprop='year']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+",
+        "selector": "h1.car-headline__title",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\s+\\w+",
+        "selector": "h1.car-headline__title",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='Size & Type']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div:nth-of-type(7) span:nth-of-type(2)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='Transmission']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='Engine']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='Drivetrain']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Fuel Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Fuel Type:).*",
+        "selector": ".col-sm-6 :contains(Fuel Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='VIN']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+",
+        "selector": "span[data-label='Mileage']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[itemprop='color']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Interior Color:+?).*",
+        "selector": ".col-sm-6 :contains(Interior Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+",
+        "selector": "div.car-headline__price",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "href",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".car-hero div a,a.car-photos__photo__link",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "Doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(\\d+)",
+        "selector": ".doors-item div",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-label='Size & Type']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.car-details__value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".col-sm-6 :contains(Trim)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".col-sm-6 :contains(certified)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span:nth-of-type(3)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "inventory",
+        "multiple": false,
+        "parentSelectors": ["_root"],
+        "selector": "a.home-cars__button",
+        "type": "SelectorLink"
+    }, {
+        "delay": 5000,
+        "id": "wrapper",
+        "multiple": true,
+        "parentSelectors": ["inventory", "wrapper"],
+        "selector": "a.car-list__car",
+        "type": "SelectorElementScroll"
+    }]
+}

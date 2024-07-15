@@ -1,0 +1,209 @@
+{
+    "_id": "dealerfront",
+    "startUrl": ["https://www.bestdealautobrokers.com/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "h4 a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Stock Number)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Stock Number)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+$",
+        "selector": ".list-group-item:contains(Year)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Make)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Make)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Model)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Model)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Bodystyle)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Bodystyle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Cylindres)[\\s\\S]+",
+        "selector": "tr:contains(Cylindres) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Transmission)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Transmission)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Engine)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Engine)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Drivetrain)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Drivetrain)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Fuel Type)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Fuel Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN)[\\s\\S]+",
+        "selector": ".list-group-item:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": ".list-group-item:contains(Mileage)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Ext Color)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Ext Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Int Color)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Int Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": "span.vehicle-cost",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".bs1_detail_image",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": ".list-group-item:contains(Doors)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Bodystyle)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Bodystyle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.inventory-vehicle-details__description",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Trim)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Trim)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "certified",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Condition)[\\s\\S]+",
+        "selector": ".list-group-item:contains(Condition)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.tab-content",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "div:nth-of-type(5) .pagination li:nth-of-type(n+3) a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "menu",
+        "multiple": false,
+        "parentSelectors": ["_root"],
+        "selector": ".megamenu > a",
+        "type": "SelectorLink"
+    }]
+}

@@ -1,0 +1,202 @@
+{
+    "_id": "dealercloud",
+    "startUrl": ["https://www.rpmotorsales.com/"],
+    "selectors": [{
+        "id": "link",
+        "parentSelectors": ["menu"],
+        "type": "SelectorLink",
+        "selector": "a.dealr-inventory-list__vehicle__photo-container",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "stock",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.stock-container",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Stock #:)[\\s\\S]+"
+    }, {
+        "id": "year",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "h1.entry-title",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(\\d+)"
+    }, {
+        "id": "make",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "h1.entry-title",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\s\\w+"
+    }, {
+        "id": "model",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "h1.entry-title",
+        "multiple": false,
+        "regex": "(?<=\\s+\\w+\\s+)\\w* ",
+        "delay": 0
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".no-bullet li:contains(Body Style)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Body Style:)[\\s\\S]+"
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-cylinders'] span.value",
+        "multiple": true,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "tr:contains('Transmission') td.attr-val",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "tr:contains('Engine') td.attr-val",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "tr:contains('Drivetrain') td.attr-val",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "fuel type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "tr:contains('Fuel Type') td.attr-val",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "vin",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.vin-container",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.odo-container",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9,]+"
+    }, {
+        "id": "color",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".no-bullet li:contains(Ext. Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Ext. Color:)[\\s\\S]+"
+    }, {
+        "id": "color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".no-bullet li:contains(Int. Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Int. Color:)[\\s\\S]+"
+    }, {
+        "id": "internet price",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "h1.entry-price",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9,]+"
+    }, {
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "type": "SelectorGroup",
+        "selector": ".gallery-thumbs img",
+        "delay": 0,
+        "extractAttribute": "src"
+    }, {
+        "id": "doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".l-columns-column-two div:nth-of-type(3) div.c-feature-badge__title",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-vehicleType'] span.value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".is-active div.vdp-content-description",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "trim",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:nth-of-type(6) [itemprop='item'] span",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".medium-7 h1",
+        "multiple": false,
+        "delay": 0,
+        "regex": "Certified+"
+    }, {
+        "id": "condition",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:nth-of-type(2) a[itemprop='item']",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\w+"
+    }, {
+        "id": "options",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".vdp-content-options ul",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "menu",
+        "parentSelectors": ["_root"],
+        "type": "SelectorLink",
+        "selector": ".navbar-embedded li:nth-of-type(2) a",
+        "multiple": true,
+        "delay": 0
+    }]
+}

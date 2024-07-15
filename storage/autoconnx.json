@@ -1,0 +1,209 @@
+{
+    "_id": "autoconnx",
+    "startUrl": ["https://www.dvorakmotors.com/"],
+    "selectors": [{
+        "id": "link",
+        "parentSelectors": ["_root", "menu"],
+        "type": "SelectorLink",
+        "selector": "a.thumbnail",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "stock",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.stock-number",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Number)[\\s\\S]+"
+    }, {
+        "id": "year",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span[itemprop='releaseDate']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "make",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span[itemprop='manufacturer']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "model",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "span[itemprop='model']",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".vehicle-information li:nth-of-type(6)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Type:)[\\s\\S]+"
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".vehicle-attributes li:nth-of-type(13)",
+        "multiple": true,
+        "delay": 0,
+        "regex": "[0-9,]+"
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Transmission)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Transmission:)[\\s\\S]+"
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Engine, Fuel:)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Engine, Fuel:)[\\s\\S]+"
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".vehicle-attributes li:contains(Drive)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Drive:)[\\S\\s]+"
+    }, {
+        "id": "fuel type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Fuel Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "vin",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(VIN)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=VIN:)[:\\s\\S]+"
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.mileage",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9,]+"
+    }, {
+        "id": "color",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Color:)[\\s\\S]+"
+    }, {
+        "id": "color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Interior Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Color:)[\\s\\S]+"
+    }, {
+        "id": "internet price",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Price)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9,]+"
+    }, {
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "type": "SelectorGroup",
+        "selector": "#photo-details-scroller a",
+        "delay": 0,
+        "extractAttribute": "href"
+    }, {
+        "id": "doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".l-columns-column-two div:nth-of-type(3) div.c-feature-badge__title",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Type:)[\\s\\S]+"
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "p[itemprop='description']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "trim",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Trim)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Trim:)[\\s\\S]+"
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Certification)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Certification:)[\\s\\S]+"
+    }, {
+        "id": "condition",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span[itemprop='itemCondition']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "options",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.tech-specs",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "menu",
+        "parentSelectors": ["_root"],
+        "type": "SelectorLink",
+        "selector": ".dealer--logo a",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "pagination",
+        "parentSelectors": ["_root", "menu", "pagination"],
+        "type": "SelectorLink",
+        "selector": ".pagination a",
+        "multiple": true,
+        "delay": 0
+    }]
+}

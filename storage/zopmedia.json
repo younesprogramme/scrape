@@ -1,0 +1,221 @@
+{
+    "_id": "zopmedia",
+    "startUrl": ["https://www.dvexotic.com/inventory"],
+    "selectors": [{
+        "id": "link",
+        "parentSelectors": ["_root", "pagination", "more"],
+        "type": "SelectorLink",
+        "selector": "h2 a,.eziVehicleName a,.ais-InfiniteHits-item a.title_value",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "stock",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.stock-no,div.name-detail",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Stock #:\\s+).*|(?<=STOCK #:\\s+).*"
+    }, {
+        "id": "year",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".hidden-xs h2,h2 p,.header-page h1",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(\\d+)"
+    }, {
+        "id": "make",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "[data-id='Make'] span,.header-page h1,.hidden-xs h2",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "model",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "[data-id='Model'] span,,.header-page h1,.hidden-xs h2",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Body Style),li:contains(Body Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Engine),li:contains(Engine Data)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Engine:\\s+?).+|(?<=Engine Data).+"
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-md-12 li:contains(Transmission),.features-options ul li:contains(Transmission)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Transmission:*)[\\s\\S]+"
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Engine)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Engine:\\s+?).+|(?<=Engine Data).*"
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Drive Train)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Drive Train:*)[\\s\\S]+"
+    }, {
+        "id": "fuel type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": " li:contains(Fuel Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Fuel Type:*)[\\s\\S]+"
+    }, {
+        "id": "vin",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.stock-no,div.name-detail",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=VIN #:\\s+).*"
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Odometer)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\d+,?\\d+"
+    }, {
+        "id": "color",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".fe-icon li:contains(Exterior Colour),li:contains(Exterior Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Exterior Colour:?)[\\s\\S]+|(?<=Exterior Color:*)[\\s\\S]+"
+    }, {
+        "id": "color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Interior Colour),li:contains(Interior Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Interior Colour:*)[\\s\\S]+|(?<=Interior Color:*)[\\s\\S]+"
+    }, {
+        "id": "internet price",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".events-press-cta h3,.col-md-6 h2",
+        "multiple": true,
+        "delay": 0,
+        "regex": "[1-9]\\d{0,3}(,\\d{3})*(\\.\\d\\d)?$"
+    }, {
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "type": "SelectorGroup",
+        "selector": ".images-navigation img,.swiper-slide img,.m-font img",
+        "delay": 0,
+        "extractAttribute": "src"
+    }, {
+        "id": "doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": " li:contains(Doors)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\d+"
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": " li:contains(Body Style), li:contains(Body Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=.*:\\s+).+|(?<=Body Type).*"
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.vehicle-overview,div.features-options:nth-of-type(5)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "trim",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "[data-id='Trim'] span,div.name-detail",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Trim #:\\s?).+"
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.name-detail",
+        "multiple": true,
+        "delay": 0,
+        "regex": "(?<=Certification #:).*"
+    }, {
+        "id": "condition",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:contains(Condition),div.name-detail",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Condition[\\s\\S]+#?:?\\s+).+"
+    }, {
+        "id": "data",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.stock-no,div.name-detail",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "data2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "ul.fe-icon,div.specifications,.hidden-xs div.features-options:nth-of-type(2)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "pagination",
+        "parentSelectors": ["_root", "pagination"],
+        "type": "SelectorLink",
+        "selector": ".resultsPagination .pagination a,.pagination a",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "more",
+        "parentSelectors": ["_root", "more"],
+        "type": "SelectorElementClick",
+        "clickElementSelector": "button.ais-InfiniteHits-loadMore",
+        "clickElementUniquenessType": "uniqueHTML",
+        "clickType": "clickMore",
+        "delay": 2000,
+        "discardInitialElements": "do-not-discard",
+        "multiple": true,
+        "selector": ".ais-InfiniteHits-item div.vehicle-overview"
+    }]
+}

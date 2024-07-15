@@ -1,0 +1,216 @@
+{
+    "_id": "dealership",
+    "startUrl": ["https://www.allaccesscarandtrucksales.com/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["pagination", "scroller"],
+        "selector": ".vehicle-card-title a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Stock:)[\\s\\S]+",
+        "selector": ".ddc-font-size-small li:contains(Stock)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\s\\w+",
+        "selector": "span.d-block.text-muted",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+$",
+        "selector": "span.d-block.text-muted",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span.font-weight-bold:nth-of-type(2)",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Body') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-cylinders'] span.value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Transmission') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Engine') + .col-xs-7 span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Drivetrain') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".u_1523844632 span.inline-data-binding",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN:)[\\s\\S]+",
+        "selector": ".ddc-font-size-small li:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,.]+",
+        "selector": "dt:contains('Odometer') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Exterior Color') + .col-xs-7",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Interior Color') + .col-xs-7",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "price",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".slide-visible img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".u_1119747976 span.inline-data-binding",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Body') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.u_1532066680",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(6) [itemprop='item'] span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(2) [itemprop='item'] span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[a-zA-Z-]+",
+        "selector": "span.d-block.text-muted",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.ws-detailed-specs",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": ".pagination a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 2000,
+        "id": "scroller",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "div.container-max-md.d-flex",
+        "type": "SelectorElementScroll"
+    }, {
+        "delay": 0,
+        "id": "menu",
+        "multiple": false,
+        "parentSelectors": ["_root"],
+        "selector": ".ddc-mega-menu-nav li.dropdown:nth-of-type(2) a",
+        "type": "SelectorLink"
+    }]
+}

@@ -1,0 +1,209 @@
+{
+    "_id": "dealercenter",
+    "startUrl": ["https://www.autodealxpress.com/inventory/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination", "pagination2"],
+        "selector": "a.view-details-link,#DWS_Async_Vehicle_Listing_4 .dws-vehicle-listing-item-title a,#DWS_Async_Vehicle_Listing_5 .dws-vehicle-listing-item-title a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\s{2})[\\s\\S]+",
+        "selector": ".col-md-12:contains(Stock),.dws-vehicle-fields-wrap:contains(Stock)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9]+",
+        "selector": ".col-md-12:contains(Year),.vdp-title strong",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Make)[\\s\\S]+|(?<=\\s{1})[\\s\\S]+",
+        "selector": ".col-md-12:contains(Make),.vdp-title strong",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Model)[\\s\\S]+|(?<=\\s{1}\\w+\\s)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Model),.vdp-title strong",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".col-md-12:contains(style)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "section",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Transmission)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Transmission),.dws-vehicle-fields-wrap:contains(Transmission)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Engine)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Engine),.dws-vehicle-fields-wrap:contains(Engine)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Drivetrain)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Drivetrain),.dws-vehicle-fields-wrap:contains(Drivetrain)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div:nth-of-type(4) div:nth-of-type(3) span.dws-vehicle-fields-value,span[data-field='fuel_type']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN)[\\s\\S]+",
+        "selector": ".col-md-12:contains(VIN),.dws-vehicle-fields-wrap:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": ".col-md-12:contains(Mileage),.dws-vehicle-fields-wrap:contains(Mileage)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Color)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Exterior Color),.dws-vehicle-fields-wrap:contains(Exterior Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Color)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Interior Color),.dws-vehicle-fields-wrap:contains(Interior Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": "span.dws-vdp-single-field-value,.dws-vdp-fields div",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": "li.lslide:nth-of-type(n+3) img,li.slick-active:nth-of-type(n+6) img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": ".col-md-12:contains(Doors)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div:nth-of-type(4) div:nth-of-type(2) span.dws-vehicle-fields-value,.dws-vehicle-fields-wrap:contains(Body Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.dws-vdp-seller-notes-container",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Trim)[\\s\\S]+",
+        "selector": ".col-md-12:contains(Trim),.dws-vehicle-fields-wrap:contains(Trim)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "section",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".u_1242744779 span.inline-data-binding",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".dws-vehicle-detail-equipment-container",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "div:nth-of-type(5) .pagination li:nth-of-type(n+2) a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "pagination2",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination2"],
+        "selector": ".bottom li:nth-of-type(n+2) a",
+        "type": "SelectorLink"
+    }]
+}

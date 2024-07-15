@@ -1,0 +1,209 @@
+{
+    "_id": "dealertrack",
+    "startUrl": ["https://www.cloutierauto.com/fr"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "a.inventory-vehicle__name",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=stock)[\\s\\S]+",
+        "selector": "tr:contains(stock) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(\\w+)$",
+        "selector": "tr:contains(Mise en Service)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+",
+        "selector": "h1",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\s{1})\\w+",
+        "selector": "h1",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Chassis)[\\s\\S]+",
+        "selector": "tr:contains(Chassis)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Cylindres)[\\s\\S]+",
+        "selector": "tr:contains(Cylindres) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Transmission)[\\s\\S]+",
+        "selector": "tr:contains(Transmission) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Cylindres)[\\s\\S]+",
+        "selector": "tr:contains(Cylindres) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Entraînement)[\\s\\S]+",
+        "selector": "tr:contains(Entraînement)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Carburant)[\\s\\S]+",
+        "selector": "tr:contains('Carburant')",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=(NIV))[\\s\\S]+",
+        "selector": "tr:contains(NIV) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+\\s?\\d+",
+        "selector": "tr:contains(Kilométrage) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=ext.)[\\s\\S]+",
+        "selector": "tr:contains(ext) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=int.)[\\s\\S]+",
+        "selector": "tr:contains(int) ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[a-zA-Z0-9\\s]+",
+        "selector": "span.title-secondary",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".vehicle-picture",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "tr:contains(Portes)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Chassis)[\\s\\S]+",
+        "selector": "tr:contains('Chassis')",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.inventory-vehicle-details__description",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "trim",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "certified",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(2) [itemprop='item'] span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "ul.inventory-vehicle-details__caracteristics-list",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "menu",
+        "multiple": false,
+        "parentSelectors": ["_root"],
+        "selector": ".is-dropdown-submenu a[title='Inventaire complet']",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "a.widget-pagination__link",
+        "type": "SelectorLink"
+    }]
+}

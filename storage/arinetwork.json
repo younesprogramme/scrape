@@ -1,0 +1,202 @@
+{
+    "_id": "arinetwork",
+    "startUrl": ["https://www.texascars.net/inventory"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "[itemprop='name'] a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Stock:)[\\s\\S]+",
+        "selector": ".details-item:contains(Stock)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "h1.ad-title",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Make:)[|\\s\\S]+",
+        "selector": ".adui-widget-content li:contains(Make)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Model:)[\\s\\S]+",
+        "selector": ".adui-widget-content li:contains(Model)",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Body Type:)[\\s\\S]+",
+        "selector": ".adui-widget-content li:contains(Body Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-cylinders'] span.value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Trans:)[\\s\\S]+",
+        "selector": ".details-item:contains(Trans)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Engine:)[\\s\\S]+",
+        "selector": ".details-item:contains(Engine)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Drivetrain:)[\\s\\S]+",
+        "selector": ".details-item:contains(Drivetrain)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Fuel Type:)[\\s\\S]+",
+        "selector": " .adui-widget-content li:contains(Fuel Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN:)[\\s\\S]+",
+        "selector": ".details-item:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Mileage:)[\\s\\S]+",
+        "selector": ".details-item:contains(Mileage)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Color:)[\\s\\S]+",
+        "selector": ".details-item:contains(Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Interior Color:)[\\s\\S]+",
+        "selector": ".adui-widget-content li:contains(Interior Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d{1,3}(,\\d{3})*(\\.\\d+)?$",
+        "selector": "div.price-value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": "img.thumb-image",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".u_1119747976 span.inline-data-binding",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Body Type:)[\\s\\S]+",
+        "selector": ".adui-widget-content li:contains(Body Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "[data-subtype='Description'] div",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Vehicle Trim:)[\\s\\S]+",
+        "selector": " .adui-widget-content li:contains(Vehicle Trim)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(2) [itemprop='item'] span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".u_1242744779 span.inline-data-binding",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".options ul",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": ".a123Content a.a123Link:nth-of-type(n+2)",
+        "type": "SelectorLink"
+    }]
+}

@@ -1,0 +1,51 @@
+https://www.avyatech.com/rest-api-with-laravel-8-using-jwt-token/
+C:\Users\v12\.ssh> ssh -i scarpfbmp.pem centos@3.16.236.247
+http://127.0.0.1:8000/api/122?auth_token=eTZuU0d4cTNRTG4rczZBQTFEU2FkSUVMdGlUSU4vL05XWTRXemNqYldkZ0JYSnpTbldKY3gxWUp1RHR5RkxjVnBKTDJUNzdpRFpKSW0wb29LNUx0RmFHOVhpbElrUFBjMVVpczV2UGhjWnh6ZzZBb1lCZlZJc3owQStkbkxyMzYyZ01manQxOHlrYkFuQndEV1N3Mm1JOEdmNkxWOGlnNw%3D%3D
+
+ cd var/www/html/
+
+laraki@v12software.com
+V12Softw@re2021
+
+
+SoRP216y3Mu19mnW
+#0b5ed7
+configuration welcome.conf
+open /etc/httpd/conf.d/welcome.conf
+/var/www/html/scrape/public
+
+sed "$(grep -n "AllowOverride None" input.file |cut -f1 -d:)s/.*/AllowOverride All/" input.file > output.file
+AllowOverride None
+put&0804
+
+ /usr/home/html/production/FBMPApi
+sudo chown -R centos:centos html
+sudo apt-get update
+sudo apt-get install zip unzip
+unzip your-file.zip -d directory
+unzip scrape.zip
+sudo unzip scrape.zip
+/usr/home/html/production/FBMPApi/public
+To see Apache version on a Debian/Ubuntu Linux, run:
+apache2 -v
+For CentOS/RHEL/Fedora Linux server, type command:
+httpd -v
+https://www.cyberciti.biz/faq/find-out-apache-version/
+install apache2
+resart apache2 :
+sudo systemctl restart httpd.service
+sudo systemctl restart httpd
+sudo apt install apache2
+https://medium.com/technology-hits/how-to-import-a-csv-excel-file-in-laravel-d50f93b98aa4
+composer require league/csv:^9.7.0
+https://getbootstrap.com/docs/5.0/forms/validation/
+https://askubuntu.com/questions/158735/how-to-set-permissions-so-that-i-can-read-and-write-to-another-partition
+https://stackoverflow.com/questions/8328481/chmod-777-to-a-folder-and-all-contents
+https://laravel.com/docs/9.x/csrf
+https://stackoverflow.com/questions/64747187/unable-to-download-file-in-laravel-ajax-on-button-click
+https://laravel.com/docs/9.x/session#storing-data
+https://stackoverflow.com/questions/3346072/download-csv-file-using-ajax
+https://stackoverflow.com/questions/26406295/passing-a-variable-through-url-in-laravel
+https://stackoverflow.com/questions/20415444/download-files-in-laravel-using-responsedownload
+https://stackoverflow.com/questions/32441327/csv-export-in-laravel-5-controller
+https://getbootstrap.com/docs/5.0/forms/validation/

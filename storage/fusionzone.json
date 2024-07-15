@@ -1,0 +1,202 @@
+{
+    "_id": "fusionzone",
+    "startUrl": ["https://sutherlinnissanftmyers.com/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["menu"],
+        "selector": "a.sc-fWSDcn",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Stock #:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Stock)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(\\d+)(\\s)",
+        "selector": ".current span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(3) span[itemprop='name']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(4) span[itemprop='name']",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Body Style:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Body Style)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-cylinders'] span.value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Transmission:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Transmission)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Engine:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Engine)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Drive Type:)[\\S\\s]+",
+        "selector": ".no-bullet li:contains(Drive Type)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "fuel type",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN)[\\s\\S]+",
+        "selector": ".no-bullet:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": ".no-bullet li:contains(Mileage)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Ext. Color:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Ext. Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Int. Color:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Int. Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": ".column div.columns,.marketPrice div",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".vdp .vdp-media img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".l-columns-column-two div:nth-of-type(3) div.c-feature-badge__title",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Body Style:)[\\s\\S]+",
+        "selector": ".no-bullet li:contains(Body Style)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".is-active div.vdp-content-description",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "li:nth-of-type(6) [itemprop='item'] span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "Certified+",
+        "selector": ".medium-7 h1",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+",
+        "selector": "li:nth-of-type(2) a[itemprop='item']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".vdp-content-options ul",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "menu",
+        "multiple": true,
+        "parentSelectors": ["_root"],
+        "selector": ".first-sub > li:nth-of-type(1) > a",
+        "type": "SelectorLink"
+    }]
+}

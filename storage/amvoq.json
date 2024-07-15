@@ -1,0 +1,201 @@
+{
+    "_id": "amvoq",
+    "startUrl": ["https://www.autousagee.ca/recherche?_token=NUUPlnvNxOfpJSnJnkaOYywTSJhxzmf4IU47wN3H&type_id=1&distance=250&page=1&trier=meilleur_resultat&taxes_incluses=true&mot_cle[%27C%C3%B4t%C3%A9%20Automotive%20Inc.%27]=C%C3%B4t%C3%A9%20Automotive%20Inc.&liste_blocs=blc"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": ".pad a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=unité)[\\s\\S]+",
+        "selector": ".info:contains(unité)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "h1",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Marque)[\\s\\S]+",
+        "selector": ".info:contains(Marque)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\Modèle)[\\s\\S]+",
+        "selector": ".info:contains(Modèle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Bodystyle)",
+        "selector": "div.inventory-details-configuration__item:contains(Bodystyle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".info:contains(Moteur)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Transmission)[\\s\\S]+",
+        "selector": ".info:contains(Transmission)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+",
+        "selector": ".info:contains(Moteur)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Traction)[\\s\\S]+",
+        "selector": ".info:contains(Traction)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Energie)[\\s\\S]+",
+        "selector": ".info:contains(Energie)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Numéro de série)[\\s\\S]+",
+        "selector": ".info:contains(Numéro de série)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9\\s,]+",
+        "selector": ".info:contains(Odomètre)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=extérieur)[\\s\\S]+",
+        "selector": ".info:contains(extérieur)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=intérieur)[\\s\\S]+",
+        "selector": ".info:contains(intérieur)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9\\s,]+",
+        "selector": ".col-auto span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".bordure img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9]+",
+        "selector": ".info:contains(portière)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "Vehicle Type",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.desc_container",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=modèle)[\\s\\S]+",
+        "selector": ".info:contains(Sous-modèle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "[Certified]+",
+        "selector": "a[title='Certified Vehicles']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[Used]+",
+        "selector": "condition",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".options_section div.col-lg-9",
+        "type": "SelectorText"
+    }, {
+        "id": "pagination",
+        "paginationType": "clickOnce",
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "a.page-link",
+        "type": "SelectorPagination"
+    }]
+}

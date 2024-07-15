@@ -1,0 +1,202 @@
+{
+    "_id": "dealercentral",
+    "startUrl": ["https://www.schrecksauto.com/all-inventory"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "[itemprop='name'] a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Stock No:)[\\s\\S]+",
+        "selector": ".inv-about-desktop [itemprop='sku'] h4",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "tr:contains('Year')",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Manufacturer:)[\\s\\S]+",
+        "selector": "tr:contains('Manufacturer')",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Model:)[\\s\\S]+",
+        "selector": "tr:contains('Model')",
+        "type": "SelectorText"
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Body Style)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div:nth-of-type(7) span:nth-of-type(2)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Transmission)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Transmission:).*"
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Engine)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Engine:+?)[\\s\\S]+"
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Driveline)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Driveline:).*"
+    }, {
+        "id": "Fuel Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Fuel Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Fuel Type).*"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN:)[\\s\\S]+",
+        "selector": "tr:contains('VIN:')",
+        "type": "SelectorText"
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Odometer)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\d+,?\\d+"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Color:)[\\s\\S]+",
+        "selector": "tr:contains('Color')",
+        "type": "SelectorText"
+    }, {
+        "id": "Color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Color:)[\\s\\S]+",
+        "selector": "tr:contains('Color')"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+.?\\d+",
+        "selector": ".inv-about-desktop h4.regular",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": "img.inv-gallery-img",
+        "type": "SelectorGroup"
+    }, {
+        "id": "Doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".doors-item div",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(\\d+)"
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Body Style)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Body Style:).*"
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".seller_comments div.col-md-12",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Trim')",
+        "type": "SelectorText"
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(certified)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Condition:)[\\s\\S]+",
+        "selector": "tr:contains('Condition')",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "special_price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+.\\d+",
+        "selector": ".inv-about-desktop h4.sales",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["_root"],
+        "selector": ".toolbar-top li.page:nth-of-type(n+3) a",
+        "type": "SelectorLink"
+    }]
+}

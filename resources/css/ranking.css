@@ -1,0 +1,154 @@
+.advisor-top-ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+.advisor-top-ranking .photo-and-ranking {
+    position: relative;
+}
+.advisor-top-ranking .name {
+    text-align: center;
+    font-weight: bold;
+}
+.advisor-top-ranking .points {
+    text-align: center;
+    font-family: "Open Sans", "Arial", "sans-serif";
+    font-weight: 300;
+    font-size: 120%;
+}
+.advisor-top-ranking .rank-number {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border: solid #ccc 1px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    font-weight: 500;
+    background-color: white;
+    line-height: 24px;
+    border-radius: 50%;
+}
+.advisor-top-ranking .download-link {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: none;
+    border: solid #eee 1px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    background-color: white;
+    line-height: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+}
+.advisor-top-ranking:hover .download-link {
+    display: block;
+}
+.advisor-top-ranking .etudiant-photo {
+    border-width: 5px;
+}
+.advisor-top-ranking.first .points {
+    font-size: 200%;
+}
+.advisor-top-ranking.first .rank-number {
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    font-size: 130%;
+}
+.advisor-top-ranking.first .etudiant-photo {
+    border-color: gold;
+}
+.advisor-top-ranking.second .name,
+.advisor-top-ranking.third .name {
+    font-size: 80%;
+}
+.advisor-top-ranking.second .etudiant-photo {
+    border-color: silver;
+}
+.advisor-top-ranking.third .etudiant-photo {
+    border-color: #CD7F32;
+}
+.advisor-worse-ranking {
+    margin-top: 50px;
+}
+.advisor-worse-ranking .advisor-line {
+    border-bottom: solid 1px #eee;
+    margin: 5px 0;
+    padding-bottom: 5px;
+}
+.advisor-worse-ranking .advisor-line:last-child {
+    border-bottom: none;
+}
+.advisor-worse-ranking .photo-and-download {
+    position: relative;
+}
+.advisor-worse-ranking .photo-and-download .download-link {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: none;
+    border: solid #eee 1px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    background-color: white;
+    line-height: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+}
+.advisor-worse-ranking .photo-and-download:hover .download-link {
+    display: block;
+}
+.advisor-worse-ranking .etudiant-photo {
+    border: solid 3px #cc0033;
+    position: relative;
+}
+.advisor-worse-ranking .rank-number {
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #ff0000;
+    color: white;
+}
+.advisor-worse-ranking .name {
+    margin: 0 10px;
+}
+.advisor-worse-ranking .points {
+    text-align: center;
+    font-family: "Open Sans", "Arial", "sans-serif";
+    font-weight: 300;
+    font-size: 120%;
+    margin-left: auto;
+}
+.ranking-panel {
+    width: 420px;
+    padding: 20px 20px 50px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: solid 1px #eee;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+/*
+.ranking-panel .groupe-de-classe {
+    font-family: "Open Sans", "Arial", "sans-serif";
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+*/
+.ranking-panel .date {
+    color: #666;
+}

@@ -1,0 +1,206 @@
+{
+    "_id": "vinlist",
+    "startUrl": ["https://www.wrightsautoemporia.com/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["wrapper"],
+        "selector": ".grid-title a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Stock #') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Year') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Make') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Model') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Body Style') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "cylinder",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Transmission') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Engine') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-field='driveType']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Fuel Type') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('VIN') td.text-right",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Mileage') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Exterior Color') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Interior Color') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+",
+        "selector": "div.main-price",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".lSPager img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Doors') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Body Style') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.features-options:nth-of-type(5)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "trim",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "certified",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "condition",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "data",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.row:nth-of-type(1) div:nth-of-type(1) table.table",
+        "type": "SelectorTable"
+    }, {
+        "clickElementSelector": "div.btn",
+        "clickElementUniquenessType": "uniqueCSSSelector",
+        "clickType": "clickMore",
+        "delay": 5000,
+        "discardInitialElements": "do-not-discard",
+        "id": "wrapper",
+        "multiple": true,
+        "parentSelectors": ["_root"],
+        "selector": "div.shop-item",
+        "type": "SelectorElementClick"
+    }]
+}

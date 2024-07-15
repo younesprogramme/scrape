@@ -1,0 +1,217 @@
+{
+    "_id": "autousagee",
+    "startUrl": ["https://www.demirciauto.ca/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["menu"],
+        "selector": "a.result",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link", "pagination"],
+        "regex": "",
+        "selector": "dt:contains('Unit number: ') + dd",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Année: ') + dd",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Marque: ') + dd",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Modèle: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-field='body']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Cylindre: ') + dd",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Transmission: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Moteur: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Traction: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-field='fuel_type']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Numéro de série: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+\\s+\\d+",
+        "selector": "dt:contains('Odomètre: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Couleur extérieur: ') + dd",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Couleur intérieur: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+\\s?\\d+",
+        "selector": ".product-page-header-inner span.price-value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".thumbnail img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Nombre de portière: ') + dd",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "section",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".product-description-inner p",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-field='trim']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "certified",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "used",
+        "selector": "used",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.product-options",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "data",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.car-details",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["menu"],
+        "selector": "li.pager-item:nth-of-type(n+2) a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "menu",
+        "multiple": false,
+        "parentSelectors": ["_root"],
+        "selector": ".first .sublevel-item-wrap a",
+        "type": "SelectorLink"
+    }]
+}

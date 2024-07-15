@@ -1,0 +1,202 @@
+{
+    "_id": "test",
+    "startUrl": ["https://www.carboyz.ca/used-cars"],
+    "selectors": [{
+        "id": "link",
+        "parentSelectors": ["_root", "pagination"],
+        "type": "SelectorLink",
+        "selector": ".col-sm-9 .col-md-12 a,.cargurus_badge_12 a,,.vehicleImage a",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "Stock",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Stock Number)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Stock Number:).*"
+    }, {
+        "id": "year",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Year)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Year:).*"
+    }, {
+        "id": "make",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Make)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Make:).*"
+    }, {
+        "id": "model",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Model)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Model:).*"
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Body Style)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div:nth-of-type(7) span:nth-of-type(2)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Transmission)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Transmission:).*"
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Engine)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Engine:+?)[\\s\\S]+"
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Driveline)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Driveline:).*"
+    }, {
+        "id": "Fuel Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Fuel Type)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Fuel Type).*"
+    }, {
+        "id": "vin",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(VIN)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=VIN:).*"
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Odometer)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\d+,?\\d+"
+    }, {
+        "id": "Color",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Exterior Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Exterior Color:+?).*"
+    }, {
+        "id": "Color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Interior Color)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Interior Color:+?).*"
+    }, {
+        "id": "internet price",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.PriceValue",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\d+,?\\d+"
+    }, {
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "type": "SelectorGroup",
+        "selector": "#carousel img",
+        "delay": 0,
+        "extractAttribute": "src"
+    }, {
+        "id": "Doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".doors-item div",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(\\d+)"
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Body Style)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Body Style:).*"
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".seller_comments div.col-md-12",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "trim",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(Trim)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(certified)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "condition",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".col-sm-6 :contains(condition)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "data",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.VehicleInfoDetails",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "pagination",
+        "parentSelectors": ["_root", "pagination"],
+        "type": "SelectorLink",
+        "selector": "a.page-numbers",
+        "multiple": true,
+        "delay": 0
+    }]
+}

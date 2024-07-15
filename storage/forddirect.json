@@ -1,0 +1,208 @@
+{
+    "_id": "belkford",
+    "startUrl": ["https://www.forddirect.net/used-inventory/index.htm"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["pagination", "wrapper"],
+        "selector": ".vehicle-card-title a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Stock)[\\s\\S]+",
+        "selector": ".ddc-font-size-small li:contains(Stock)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "span.h4.text-muted",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+$",
+        "selector": "span.h4.text-muted",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\w+",
+        "selector": "span.font-weight-bold:nth-of-type(2)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Body/Seating') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".info:contains(Moteur)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Transmission') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+",
+        "selector": "dt:contains('Engine') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Drivetrain') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Energie)[\\s\\S]+",
+        "selector": ".info:contains(Energie)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN:)[\\s\\S]+",
+        "selector": ".ddc-font-size-small li:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9\\s,]+",
+        "selector": "dt:contains('Odometer') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Exterior Color') + .col-xs-7 ",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Interior Color') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9\\s,]+",
+        "selector": "span.price-value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".slide-visible img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9]+",
+        "selector": ".info:contains(portière)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "dt:contains('Body') + .col-xs-7 span",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".ws-dealernotes div",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=modèle)[\\s\\S]+",
+        "selector": ".info:contains(Sous-modèle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "[Certified]+",
+        "selector": "a[title='Certified Vehicles']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[UsedNew]+",
+        "selector": "span.h4.text-muted",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.ws-detailed-specs",
+        "type": "SelectorText"
+    }, {
+        "id": "pagination",
+        "paginationType": "clickMore",
+        "parentSelectors": ["_root", "pagination"],
+        "selector": ".pagination-next i",
+        "type": "SelectorPagination"
+    }, {
+        "delay": 2000,
+        "id": "wrapper",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "div.vehicle-card-body",
+        "type": "SelectorElementScroll"
+    }]
+}

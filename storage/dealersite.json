@@ -1,0 +1,209 @@
+{
+    "_id": "dealersite",
+    "startUrl": ["https://rightchoiceauto.ca/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "a[itemprop='name'],a.ctm-heading-3",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "Stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "stock",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[itemprop='releaseDate']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[itemprop='brand']",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[itemprop='model']",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Body Style)>div:nth-child(2),,dl:contains(Body Style) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "cylinder",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Transmission)>div:nth-child(2),,dl:contains(Transmission) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ",dl:contains(Engine) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Drivetrain)>div:nth-child(2),,,dl:contains(Drive Type) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Fuel Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Fuel Type)>div:nth-child(2),,,dl:contains(Fuel Type) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span.truncate,.Vehicle-details-info:contains(VIN)>div:nth-child(2)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Kilometers)>div:nth-child(2),li strong",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Exterior)>div:nth-child(2),dl:contains(Exterior) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ",dl:contains(Interior Colour) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+",
+        "selector": "span.dsp-gta-h3,strong[itemprop='offers']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".multi-list img,div:nth-of-type(n+4) .m-2 img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "Doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": ".Vehicle-details-info:contains(Doors),,dl:contains(Doors) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".Vehicle-details-info:contains(Body Style)>div:nth-child(2),,dl:contains(Body Style) li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "pre",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "trim",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "strong",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "[itemprop='itemCondition'] li",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "ul.list--no-style.multi-list",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "menu",
+        "multiple": true,
+        "parentSelectors": ["_root"],
+        "selector": ".menu-item-246 a,.w-nav--primary li:nth-of-type(2) a.link-decoration--none",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "pagination",
+        "multiple": true,
+        "parentSelectors": ["pagination", "menu"],
+        "selector": "a.page-numbers",
+        "type": "SelectorLink"
+    }]
+}

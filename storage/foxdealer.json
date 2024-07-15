@@ -1,0 +1,209 @@
+{
+    "_id": "foxdealer",
+    "startUrl": ["https://phoenix.clscars.com/?utm_source=google&utm_medium=gmb"],
+    "selectors": [{
+        "id": "link",
+        "parentSelectors": ["pagination", "menu"],
+        "type": "SelectorLink",
+        "selector": "a.carbox-thumb__anchor",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "stock",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.vehicleIds__item:nth-of-type(1) span.vehicleIds__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "year",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.vehicle-title--year",
+        "multiple": false,
+        "delay": 0,
+        "regex": "\\d+"
+    }, {
+        "id": "make",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.vehicle-title--make",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "model",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.vehicle-title--model",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.title-standardbody",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".info:contains(Moteur)",
+        "multiple": true,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.title-transdesc",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".v-summary-item__engine span.summaryList__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.vehicle-title--drivetrain",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "fuel type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".info:contains(Energie)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=Energie)[\\s\\S]+"
+    }, {
+        "id": "vin",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.vehicleIds__item:nth-of-type(2) span.vehicleIds__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".v-summary-item__mileage span.summaryList__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9\\s,]+"
+    }, {
+        "id": "color",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".v-summary-item__extcolor span.summaryList__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".v-summary-item__intcolor span.summaryList__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "internet price",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.finalPrice__value",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9\\s,]+"
+    }, {
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "type": "SelectorGroup",
+        "selector": "div.vehicleCarousel__thumbs> div img",
+        "delay": 0,
+        "extractAttribute": "src"
+    }, {
+        "id": "doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".info:contains(portière)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[0-9]+"
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "span.title-standardbody",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.desc_container",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "trim",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".info:contains(Sous-modèle)",
+        "multiple": false,
+        "delay": 0,
+        "regex": "(?<=modèle)[\\s\\S]+"
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "a[title='Certified Vehicles']",
+        "multiple": true,
+        "delay": 0,
+        "regex": "[Certified]+"
+    }, {
+        "id": "condition",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:nth-of-type(2) span[itemprop='name']",
+        "multiple": false,
+        "delay": 0,
+        "regex": "[UsedNew]+"
+    }, {
+        "id": "options",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "#clean_options",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "pagination",
+        "parentSelectors": ["pagination", "menu"],
+        "type": "SelectorLink",
+        "selector": "a.page-numbers",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "menu",
+        "parentSelectors": ["_root"],
+        "type": "SelectorLink",
+        "selector": ".inventory a.navbar__link",
+        "multiple": true,
+        "delay": 0
+    }]
+}

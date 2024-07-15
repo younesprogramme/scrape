@@ -1,0 +1,218 @@
+{
+    "_id": "sincro",
+    "startUrl": ["https://www.collectorsdreamcars.com/"],
+    "selectors": [{
+        "id": "link",
+        "parentSelectors": ["_root", "pagination"],
+        "type": "SelectorLink",
+        "selector": "[itemprop='name'] a",
+        "multiple": true,
+        "delay": 0
+    }, {
+        "id": "stock",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications span[itemprop='sku']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "year",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:nth-of-type(3) [itemprop='item'] span",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "make",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "li:nth-of-type(4) span[itemprop='name']",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "model",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "li:nth-of-type(5) span[itemprop='name']",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "style",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications div span.value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "cylinder",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-cylinders'] span.value",
+        "multiple": true,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "transmission",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications [itemprop='vehicleTransmission'] span",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "engine",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": ".copy div .vehicle-specifications [itemprop='vehicleEngine'] span",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "drive train",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".u_1460792338 span.inline-data-binding",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "fuel type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications span[itemprop='fuelType']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "vin",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications span[itemprop='vehicleIdentificationNumber']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "vin2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "vin2",
+        "multiple": true,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "mileage",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": ".copy div .vehicle-specifications span[not='isNumeric']",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "color",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications span[itemprop='color']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "color 2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications span[itemprop='vehicleInteriorColor']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "internet price",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "[itemtype='//schema.org/Car'] span[itemprop='price']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "type": "SelectorGroup",
+        "selector": ".img-thumbnail img.co-lazy-loaded",
+        "delay": 0,
+        "extractAttribute": "src"
+    }, {
+        "id": "doors",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications span[itemprop='numberOfDoors']",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "stock2",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "section",
+        "multiple": true,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "Vehicle Type",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-vehicleType'] span.value",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "description",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "div.features-options:nth-of-type(5)",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "trim",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:nth-of-type(6) [itemprop='item'] span",
+        "multiple": false,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "certified",
+        "parentSelectors": ["link"],
+        "type": "SelectorText",
+        "selector": "li:nth-of-type(2) [itemprop='item'] span",
+        "multiple": true,
+        "delay": 0,
+        "regex": ""
+    }, {
+        "id": "mileage2",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": ".copy div .vehicle-specifications span[itemprop='mileageFromOdometer']",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "condition",
+        "parentSelectors": ["link"],
+        "type": "SelectorHTML",
+        "selector": "li:nth-of-type(2) [itemprop='item'] span",
+        "multiple": false,
+        "regex": "",
+        "delay": 0
+    }, {
+        "id": "pagination",
+        "parentSelectors": ["_root", "pagination"],
+        "type": "SelectorLink",
+        "selector": ".pagination a",
+        "multiple": true,
+        "delay": 0
+    }]
+}

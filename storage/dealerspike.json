@@ -1,0 +1,216 @@
+{
+    "_id": "dealerspike",
+    "startUrl": ["https://www.majorpowersports.com/"],
+    "selectors": [{
+        "delay": 0,
+        "id": "menu",
+        "multiple": true,
+        "parentSelectors": ["_root"],
+        "selector": ".index-ctas a",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".unitHighlights .LiInvstock-number span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".LiInvyear span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".LiInvmake span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".LiInvmodel span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Body Style') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "cylinder",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Transmission') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Engine') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[data-field='driveType']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Fuel Type') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".unitHighlights .LiInvvin span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "vin2",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "section",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Mileage') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Exterior Color') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Interior Color') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.price-value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".lSPager img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Doors') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "stock2",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "section",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".LiInvcategory.unitSpec span",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.features-options:nth-of-type(5)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "trim",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "certified",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "data",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.name-detail",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["menu", "pagination"],
+        "selector": "a.vehicle-heading__link",
+        "type": "SelectorLink"
+    }, {
+        "id": "pagination",
+        "paginationType": "clickMore",
+        "parentSelectors": ["menu", "pagination"],
+        "selector": ".v7list-footer i.fa-angle-right",
+        "type": "SelectorPagination"
+    }]
+}

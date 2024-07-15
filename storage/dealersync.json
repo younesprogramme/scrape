@@ -1,0 +1,202 @@
+{
+    "_id": "dealersync",
+    "startUrl": ["https://www.petramotors.com/inventory"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["more"],
+        "selector": "h4 a.notranslate",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "#ds-vdp-sidebar-vehicle-id-total-column span.ds-vdp-highlighted-value",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "h1",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\s{1})[\\s\\S]+",
+        "selector": "h1",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\s{1})[\\s\\S]+",
+        "selector": "h1",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Style)[\\s\\S]+",
+        "selector": ".ds-vdp-feature-text-container:contains(Style)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "#ds-vdp-feature-engine div.ds-vdp-feature-description",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Transmission)[\\s\\S]+",
+        "selector": ".ds-vdp-feature-text-container:contains(Transmission)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "#ds-vdp-feature-engine div.ds-vdp-feature-description",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Drivetrain)[\\s\\S]+",
+        "selector": ".ds-vdp-feature-text-container:contains(Drivetrain)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Fuel Type') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN:)[\\s\\S]+",
+        "selector": "div#ds-vdp-sidebar-vehicle-id-row",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "#ds-vdp-sidebar-mileage-total-column span.ds-vdp-highlighted-value",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Exterior)[\\s\\S]+",
+        "selector": ".ds-vdp-feature-text-container:contains(Exterior)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=Interior)[\\s\\S]+",
+        "selector": ".ds-vdp-feature-text-container:contains(Interior)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+,?\\d+",
+        "selector": "#ds-vdp-sidebar-pricing-row span.ds-vdp-sidebar-price-value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "data-src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": "li img.img-responsive",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Doors') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "tr:contains('Body Style') td.text-right",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div#ds-vdp-description-container",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "(\\w+)$",
+        "selector": "h3.ds-vdp-vehicle-sub-title",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "certified",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "a#ds-menu-preowned",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "data",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.name-detail",
+        "type": "SelectorText"
+    }, {
+        "delay": 2000,
+        "id": "more",
+        "multiple": true,
+        "parentSelectors": ["_root"],
+        "selector": "div[itemtype='http://schema.org/Product http://schema.org/Car']",
+        "type": "SelectorElementScroll"
+    }]
+}

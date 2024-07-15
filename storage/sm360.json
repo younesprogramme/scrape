@@ -1,0 +1,201 @@
+{
+    "_id": "sm360",
+    "startUrl": ["https://www.whiterockhonda.com/en/used-inventory"],
+    "selectors": [{
+        "delay": 0,
+        "id": "link",
+        "multiple": true,
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "a[data-theme-style='vehiclePreviewName_color']",
+        "type": "SelectorLink"
+    }, {
+        "delay": 0,
+        "id": "stock",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "span[itemprop='vehicleIdentificationNumber'],.car-number:contains(#)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "year",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "\\d+",
+        "selector": "span.breadcrumbs__block-item",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "make",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\s{1})\\w+",
+        "selector": "span.breadcrumbs__block-item",
+        "type": "SelectorHTML"
+    }, {
+        "delay": 0,
+        "id": "model",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=\\s+\\w+\\s+)[\\s\\S]+",
+        "selector": "span.breadcrumbs__block-item",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "style",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Bodystyle)",
+        "selector": "div.inventory-details-configuration__item:contains(Bodystyle)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "cylinder",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": ".copy div .vehicle-specifications [template='vehicleIdentitySpecs-cylinders'] span.value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "transmission",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Transmission)",
+        "selector": "div.inventory-details-configuration__item:contains(Transmission),.vdp-used-specs-single--info:contains(Transmission)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "engine",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Engine)",
+        "selector": "div.inventory-details-configuration__item:contains(Engine),.vdp-used-specs-single--info:contains(Engine)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "drive train",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Drivetrain)",
+        "selector": "div.inventory-details-configuration__item:contains(Drivetrain),.vdp-used-specs-single--info:contains(Drive Train)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "fuel type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Fuel)",
+        "selector": "div.inventory-details-configuration__item:contains(Fuel),.showroom-vdp-used-features-vehicle-info:contains(Fuel)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "vin",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "(?<=VIN).*",
+        "selector": ".inventory-details-info__stock span:nth-of-type(4),.-ws-data-preview-element,.car-number:contains(VIN)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "mileage",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": "div.inventory-details-configuration__item:contains(Mileage),.vdp-used-specs-single--info:contains(Odometer)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Ext)",
+        "selector": "div.inventory-details-configuration__item:contains(Ext. Color),.vdp-used-specs-single--info:contains(Exterior Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "color 2",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "td[itemprop='vehicleInteriorColor'],.vdp-used-specs-single--info:contains(Interior Color)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "internet price",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9,]+",
+        "selector": "p.vehicle-finance__item-term-payment-value,.is-price,span.vehicle-cash-purchase-selling-price__value-amount",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "extractAttribute": "src",
+        "id": "photo urls",
+        "parentSelectors": ["link"],
+        "selector": ".gallery-delta__thumbnail-picture img",
+        "type": "SelectorGroup"
+    }, {
+        "delay": 0,
+        "id": "doors",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[0-9]+",
+        "selector": "div.inventory-details-configuration__item:contains(Doors),.showroom-vdp-used-features-vehicle-info-value",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "Vehicle Type",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Bodystyle)",
+        "selector": "div.inventory-details-configuration__item:contains(Bodystyle),.showroom-vdp-used-features-vehicle-info:contains(Body Style)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "description",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div[itemprop='description']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "trim",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "[\\s\\S]+(?=Trim)",
+        "selector": "div.inventory-details-configuration__item:contains(Trim)",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "certified",
+        "multiple": true,
+        "parentSelectors": ["link"],
+        "regex": "[Certified]+",
+        "selector": "a[title='Certified Vehicles']",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "condition",
+        "multiple": false,
+        "parentSelectors": ["_root"],
+        "regex": "[Used]+",
+        "selector": "h1",
+        "type": "SelectorText"
+    }, {
+        "delay": 0,
+        "id": "options",
+        "multiple": false,
+        "parentSelectors": ["link"],
+        "regex": "",
+        "selector": "div.vehicle-details-tabs__tab-content",
+        "type": "SelectorText"
+    }, {
+        "id": "pagination",
+        "paginationType": "clickMore",
+        "parentSelectors": ["_root", "pagination"],
+        "selector": "button.listing-used-button-loading,a.pagination__item:nth-of-type(2)",
+        "type": "SelectorPagination"
+    }]
+}
