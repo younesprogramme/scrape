@@ -88,11 +88,11 @@ class ProviderController extends Controller
 
     public function csv(Request $request)
     {
-        $this->scrapingJobId = $request->scrapingJobId;
+        $scrapingJobId = $request->scrapingJobId;
         $provider = $request->provider;
         $contents = Storage::disk('local')->get($provider . '/status.txt');
         if ($contents == "finished") {
-            return response()->json(array('msg' => 'finished', 'scrapingJobId' => $this->scrapingJobId), 200);
+            return response()->json(array('msg' => 'finished', 'scrapingJobId' => $scrapingJobId), 200);
         } else {
             return response()->json(array('msg' => 'loading'), 200);
         }
