@@ -16,13 +16,11 @@ use WebScraper\ApiClient\WebScraperApiException;
 class ProviderController extends Controller
 {
 
-    public $scrapingJobId;
-    public $apiToken = "ZfTkabsWGkNtNLgTPXITy64SODdtzh4h4ecoAdgNIVT7dSgvsYJzCLwd91KA";
     public $client;
     public function __construct()
     {
         $this->client = new Client([
-            'token' => $this->apiToken,
+            'token' => "token",
         ]);
     }
     public function index()
