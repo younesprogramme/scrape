@@ -600,58 +600,7 @@
 
 
     <script>
-        $.ajax({
-            url: "https://cdn.spincar.com/spincar-static/20190909/?_=0fb77324a6ec#!customer=coquitlamchrysler!vin=1c4ajwag2dl604329!canonicalhostname=journeychryslerdodgejeepram.com!stscolor=00A19B%2CF5A623%2CAD0025!lang=en!popoutenabled!region=us",
-            dataType: 'text',
-            success: function(data) {
-                var elements = $("<div>").html(data)[0].getElementsByTagName("ul")[0].getElementsByTagName(
-                "li");
-                for (var i = 0; i < elements.length; i++) {
-                    var theText = elements[i].firstChild.nodeValue;
-                    // Do something here
-                }
-            }
-        });
-        // Example POST method implementation:
-        // async function postData(url = '', data = {}) {
-
-        //     const response = await fetch(url, {
-        //         method: 'get', // *GET, POST, PUT, DELETE, etc.
-
-        //     });
-        //     return response.json(); // parses JSON response into native JavaScript objects
-        // }
-
-        // postData('/test', {
-        //         provider: 'custom'
-        //     })
-        //     .then(data => {
-        //         console.log(data); // JSON data parsed by `data.json()` call
-        //     });
-
-        // var socket = io();
-
-        $(function() {
-            // let ip_adrress = "http://127.0.0.1";
-            // let port = "3000";
-            // let socket = io(ip_adrress + ":" + port);
-            // var token = document.querySelector('input[name = "_token"]').value;
-            // let userid;
-            // socket.on('connection');
-            // console.log(token);
-            // // socket.emit('newpost', 'finished');
-            // socket.emit('newpost', {
-            //     message: 'finished',
-            //     userid: token
-            // });
-            // socket.on('send status', (data) => {
-            //     document.getElementById("success_msg").style.display = "none";
-            //     if (data.message == "finished" && token == data.userid) {
-            //         document.getElementById("success_msg").style.display = "block";
-            //         console.log(data.message + ' / ' + data.userid);
-            //     }
-            // });
-        });
+        
         var options = $('select.form-select option:gt(0)');
         var arr = options.map(function(_, o) {
             return {
