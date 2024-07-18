@@ -4,19 +4,14 @@ namespace App\Exceptions;
 
 namespace App\Http\Controllers;
 
-use App\Events\MessageNotification;
+
 use App\Scrape;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Storage;
-use League\Csv\Reader;
-use Symfony\Component\Panther\Client as Panther;
 use WebScraper\ApiClient\Client;
 use WebScraper\ApiClient\WebScraperApiException;
 
-// use React\Http\Response;
-// use React\Http\Server;
 
 class ProviderController extends Controller
 {
@@ -24,8 +19,6 @@ class ProviderController extends Controller
     public $scrapingJobId;
     public $apiToken = "ZfTkabsWGkNtNLgTPXITy64SODdtzh4h4ecoAdgNIVT7dSgvsYJzCLwd91KA";
     public $client;
-    public $url;
-    public $functionname;
     public function __construct()
     {
         $this->client = new Client([
